@@ -4,15 +4,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Adventure's Machine</title>
+    <title>Adventurer's Machine</title>
     <link rel="stylesheet" href="./CSS/adventuresCSS.css">
 </head>
 
 <body>
-    <div class="upper"></div>
-    <div class="middle"></div>
+    <div class="upper">
+        <h1>Adventurer's Machine</h1>
+        <div class="inp">
+            <div class="danoinp"><input type="text" id="inputValue"></div>
+            <div class="buttonbg">
+                <select id="inputBase">
+                    <option value="decimal">Decimal</option>
+                    <option value="hexadecimal">Hexadecimal</option>
+                    <option value="octal">Octal</option>
+                    <option value="binario">Binario</option>
+                </select>
+            </div>
+        </div>
+        <h1>Converta seu dano para</h1>
+        <div>
+        <input type="checkbox" id="convertDecimal"><label for="convertDecimal">Decimal</label>
+        <input type="checkbox" id="convertHexadecimal"><label for="convertHexadecimal">Hexadecimal</label>
+        <input type="checkbox" id="convertOctal"><label for="convertOctal">Octal</label>
+        <input type="checkbox" id="convertBinario"><label for="convertBinario">Binário</label>
+        </div>
+    </div>
+    <div class="middle">
+        <div id="output"></div>
+    </div>
     <div class="bottom">
-        <div class="character"><img src="" alt=""></div>
+        <div id="char" class="character"><button onclick="calcular()"><img src="./Assets/character.gif" alt=""></button>
+        </div>
         <div class="ground">
             <div class="tileGround"><img src="./Assets/tile_0001.png" alt=""></div>
             <div class="tileGround"><img src="./Assets/tile_0002.png" alt=""></div>
@@ -41,5 +64,6 @@
         </div>
     </div>
 </body>
+<script src="./JS/machineJS.js"></script>
 
 </html>
